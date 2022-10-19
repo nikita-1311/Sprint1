@@ -42,3 +42,8 @@ module.exports = function (config) {
     restartOnFileChange: true
   });
 };
+$(document).ready(function(){
+  $('.login-info-box').fadeOut();
+  $('.login-show').addClass('show-log-panel');
+});
+
