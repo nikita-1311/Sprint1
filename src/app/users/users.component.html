@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Courier</title>
+  <link rel="stylesheet" href="users.component.css">
+</head>
+
+<body>
+  <nav id="nav-top">
+    <ul>
+      <li><span><a routerLink="/our-services">Our Services</a></span></li>
+      <li><span><a  routerLink="/about-us"> About Us</a></span></li>
+      <li><span><a routerLink="/contact-us">Contact Us</a></span></li>
+      <li><a routerLink="/status">Track Courier</a></li>
+      <li id="sign-in"><a routerLink="/admin">Sign in/ Log in</a></li>
+    </ul>
+  </nav>
+  <div id="container">
+    <h1 id="logo">Courier Management System</h1>
+
+    <form class="" action="" method="post">
+       <input type="text" name="Order Id" value="Enter Order ID">
+      <input type="submit" name="" value="Track" [routerLink]="['/status']" >
+    </form>
+  </div>
+  <!-- End of Container ID -->
+  <footer>
+    <nav id="nav-bottom" class="clearfix">
+      <ul class="left-menu">
+        <li><a routerLink="/our-services">Services</a></li><br/>
+        <li><a routerLink="/status">Track Orders</a></li><br/>
+        <li><a routerLink="/about-us">About Us</a></li>
+      </ul>
+      <ul id="right-menu">
+        <li>Have a Business Enquiry? Write us here</li><br/><br/>
+        <li>Monday-Friday : 9:00 AM to 8:00</li><br/>
+        <li>Saturday-Sunday : 10:00AM to 7:00</li>
+      </ul>
+      <ul id="center-menu">
+        <li>   Contact</li><br/>
+        <li>  +91 1234567890</li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
+<router-outlet></router-outlet>

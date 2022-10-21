@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <title>Login Page </title>
+<link rel="stylesheet" href="admin.component.css">
+</head>
+<body>
+  <form class="border p-3 rounded-3" [formGroup]="loginForm" (ngSubmit)="loginSubmited()">
+<div class="container">
+  <div class="left-section">
+    <div class="header">
+      <h1 class="animation a1">Welcome Back!</h1>
+      <h4 class="animation a2">Log in for entering your Admin dashboard.</h4>
+    </div>
+    <div class="row">
+      <input type="email" class="form-field animation a3" placeholder="Username">
+      <input type="password" class="form-field animation a4" placeholder="Password">
+      <p class="animation a5"><a routerLink="/forgot-password">Forgot Password</a></p>
+      </div>
+      <div class="button">
+      <button type="submit" class="btn btn-primary" [disabled]="false"> LOGIN</button>
+    </div>
+  </div>
+  <div class="right-section"></div>
+</div>
+</form>
+</body>
+</html>
+

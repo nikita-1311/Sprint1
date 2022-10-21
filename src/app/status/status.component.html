@@ -1,0 +1,44 @@
+<html>
+<head>
+  <link rel="stylesheet" href="status.component.css">
+</head>
+<div *ngFor="let item of status;let i=index;">
+  <!-- <div>
+            <img [src]="item.photo" >
+          </div> -->
+  <!-- <div>{{item.name}}</div>
+          <div ><b>{{item.price}}</b></div>
+          <div><b>{{item.quantity}}</b></div>
+          <div><b>{{item.price}}</b></div><br> -->
+  <div>
+    <div class="row multi-steps-wrap">
+      <ul class="list-unstyled multi-steps">
+        <li
+          class="job-status job-created"
+          [ngClass]="{'job-inprogress is-active negative': item.status == 'processing'}"
+        >
+          processing
+        </li>
+        <li
+          class="job-status"
+          [ngClass]="{'job-inprogress is-active negative': item.status == 'packed'}"
+        >
+          Packed
+        </li>
+        <li
+          class="job-status job-completed"
+          [ngClass]="{'job-inprogress is-active negative': item.status == 'shipped'}"
+        >
+          Shipped
+        </li>
+        <li
+          class="job-status job-closed"
+          [ngClass]="{'job-inprogress is-active negative': item.status == 'delivered'}"
+        >
+          Delivered
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</html>
